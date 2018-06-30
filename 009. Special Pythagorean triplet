@@ -1,0 +1,39 @@
+package testerPack;
+
+public class SpecialPythagoreanTriplet {
+
+public static void main(String[] args) {
+	
+	/*smallest #s possible for their sum with any combination 
+	 * of the other variables to equal 1000 while still 
+	 * satisfying a < b < c && a^2 + b^2 = c^2*/
+	int expSum = 1000;
+	int prod = 0;
+	
+	//setting the value of a to be tested
+	for (int a = 1; a < expSum/3; a++) {
+		
+		//setting the value of b to be testes
+		for (int b = a+1; b < expSum/2; b++ ) {
+			
+			//setting the value of c to be tested
+			for (int c = b+1; c < expSum-3; c++) {
+				
+				//determines if we have the pythagorean triplet
+				//stores the value of the product abc
+				//ends the function if we have the pythagorean triplet
+				if (a+b+c == expSum && (a*a)+(b*b)==(c*c)) {
+					prod = a*b*c;
+					a = expSum;
+				}
+			}
+				
+		}
+		
+	}
+	
+	//prints the value of the product of the triplet
+	System.out.println(prod);
+	
+	}
+}
