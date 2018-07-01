@@ -1,6 +1,6 @@
 package testerPack;
 
-public class DivisibleTriangularNumber {
+public class LargestCollatzSeq {
 
 	public static void main(String[] args) {
 		long counter = 0;
